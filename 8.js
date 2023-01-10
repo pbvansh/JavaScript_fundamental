@@ -6,8 +6,6 @@ const arr = [
 const ordered_by = ['name', 'age']
 const orders = ['asc', 'desc']
 
-Object
-
 arr.sort((a, b) => {
     if (a.name > b.name) return orders[0] === 'asc' ? -1 : 1
     if (a.name < b.name) return orders[0] === 'asc' ? 1 : -1
