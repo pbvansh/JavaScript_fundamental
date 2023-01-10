@@ -1,4 +1,4 @@
-const input = [0, 13, 23, 15, 12]
+const input = [0, 13, 23, 15, 12,0]
 
 input.forEach(val => {
     let str;

@@ -1,5 +1,5 @@
 let obj = { name: 'JJ', job: 'Programmer', age: 22 };
-let renameKey = { name: 'firstName', job: 'Role' };
+let renameKey = { name: 'firstName', job: 'Role', abc:'hfj' };
 
 let str = JSON.stringify(obj).toString()
 const arr1 = (Object.entries(renameKey))
