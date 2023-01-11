@@ -11,15 +11,14 @@ inputString1.forEach((val) => {
 let str = [...titleObj].toString().concat("\\n")
 
 inputString1.forEach((obj, i) => {
-    str = str + "," + Object.values(obj).toString()
-    if (Object.values(obj).length < titleObj.size) {
-        let val = '';
-        for (let i = 0; i < titleObj.size - Object.values(obj).length; i++) {
-            val += ',-';
-        }
-        str+=val;
-    }
-    str = str.concat("\\n");
+    let val = '';
+    titleObj.forEach((key)=>{
+        if(obj[key]){
+            val+=`,${obj[key]}`
+        }else val += ',-';
+    })
+    str+=val;
+     str = str.concat("\\n");
 })
 
 str = str.slice(0, -2)
