@@ -4,19 +4,22 @@ let arr = [
     { name: 'Fred', age: 40 }
 ];
 
-// const myMap = new Map()
 
-arr = JSON.parse(JSON.stringify(arr).toLowerCase());
-
-const ordered_by = ['name', 'age']
 const orders = ['desc', 'desc']
 
-arr.sort((a, b) => {
-    if (a.name > b.name) return orders[0] === 'asc' ? -1 : 1
-    if (a.name < b.name) return orders[0] === 'asc' ? 1 : -1
-    if (a.name == b.name) {
-        if (a.age > b.age) return orders[1] === 'asc' ? -1 : 1
-        if (a.age < b.age) return orders[1] === 'asc' ? 1 : -1
-    }
+const map = new Map();
+arr.forEach((elm) => {
+    map.set(elm, JSON.parse(JSON.stringify(elm).toLowerCase()))
 })
-console.log(arr);
+const shortedArr = [...map.entries()].sort((a, b) => {
+    if (a.name > b.name) return orders[0] === 'asc' ? -1 : 1
+    else if (a[1].name < b[1].name) return orders[0] === 'asc' ? 1 : -1
+    else if (a[1].name == b[1].name) {
+        if (a[1].age > b[1].age) return orders[1] === 'asc' ? -1 : 1
+        else if (a[1].age < b[1].age) return orders[1] === 'asc' ? 1 : -1
+    }
+});
+
+for (const keys of shortedArr) {
+    console.log(keys[0]);
+}
