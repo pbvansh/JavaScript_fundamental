@@ -4,7 +4,6 @@ let arr = [
     { name: 'Fred', age: 40 }
 ];
 
-
 const orders = ['desc', 'asc']
 
 const shortedArr = arr.sort((a, b) => {
@@ -18,6 +17,4 @@ const shortedArr = arr.sort((a, b) => {
     }
 });
 
-arr.forEach(element => {
-    console.log(element);
-});
+console.log(arr);
