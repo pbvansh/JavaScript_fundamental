@@ -1,9 +1,9 @@
 const { spawn } = require('child_process');
 
-const child = spawn('demo.js');
+const child = spawn('demo.bat');
 
 child.stdout.on('data',(data)=>{
-    console.log(data);
+    console.log(data.toString());
 })
 
 child.stderr.on('error',(error)=>{
