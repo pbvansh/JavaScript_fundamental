@@ -8,6 +8,7 @@ event.on('printName',()=>{
 event.on('printName',()=>{
     console.log('Hey, My last name vansh.');
 })
+
 event.emit('printName');
 
 event.on('sumTwo',(a,b)=>{
