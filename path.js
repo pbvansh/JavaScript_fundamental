@@ -12,6 +12,7 @@ console.log(path.isAbsolute(__dirname));
 console.log(path.isAbsolute('./child_process'));
 
 console.log(path.join('path1','path2','path3','index.js'));
+console.log(path.join('path1','path2','path3','index.js'));
 console.log(path.join('/path1','path2','/path3','index.js'))
 console.log(path.join('/path1','path2','../path3','index.js'));
 console.log(path.join('/path1','path2','../path3','../index.js'));
